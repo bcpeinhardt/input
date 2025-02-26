@@ -17,8 +17,8 @@ export function input(prompt) {
     const bytesRead = fs.readSync(0, buffer, 0, buffer.length, null);
     const input = buffer.toString('utf-8', 0, bytesRead).trim();
 
-    return new Ok(input.trim());
-    
+    return new Ok(input);
+
   } catch {
     return new GError(undefined);
   }
