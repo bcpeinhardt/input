@@ -3,6 +3,6 @@ import input.{input}
 
 pub fn main() {
   // I just run this on all four non browser runtimes: erlang, node, deno, bun
-  let assert Ok(my_input) = input("Hello: ")
+  let assert Ok(my_input) = input(prompt: "> ")
   io.println("\"" <> my_input <> "\"")
 }

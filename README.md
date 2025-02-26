@@ -17,7 +17,7 @@ gleam add input@1
 import input.{input}
 
 pub fn main() {
-  let assert Ok(my_input) = input("Hello: ")
+  let assert Ok(my_input) = input(prompt: "> ")
 }
 ```
 
