@@ -7,6 +7,6 @@ input(Prompt) ->
     case io:get_line(Prompt) of
         eof -> {error, eof};
         {error, _} -> {error, no_data};
-        Data when is_binary(Data) -> {ok, string:trim(Data)};
-        Data when is_list(Data) -> {ok, string:trim(unicode:characters_to_binary(Data))}
+        Data when is_binary(Data) -> {ok, string:trim(Data, trailing, "\r\n")};
+        Data when is_list(Data) -> {ok, string:trim(unicode:characters_to_binary(Data), trailing)}
     end.
