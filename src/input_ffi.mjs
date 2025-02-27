@@ -6,7 +6,7 @@ import { Ok, Error as GError } from "./gleam.mjs";
  * Mimics Python's `input` builtin.
  * 
  * @param {string} prompt
- * @returns {string} 
+ * @returns {Ok | GError} 
  */
 export function input(prompt) {
   try {
